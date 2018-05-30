@@ -1,0 +1,53 @@
+<div class="container">
+  <div class="row justify-content-center">
+      <div class="col-6">
+          <p>Panel</p>
+          <kendo-tabstrip>
+              <kendo-tabstrip-tab [title]="'Sign In'" [selected]="true">
+                  <ng-template kendoTabContent>
+
+                      <div class="card-block">
+                          <form [formGroup]="signInForm" (ngSubmit)="onSignIn()" class="k-form">
+                              <label class="k-form-field">
+                                  <span>Username</span>
+                                  <input formControlName="username" type="text" class="k-textbox" placeholder="Username" />
+                              </label>
+                              <label class="k-form-field">
+                                  <span>Password</span>
+                                  <input formControlName="password" type="password" class="k-textbox" placeholder="Password" />
+                              </label>
+                              <button class="k-button k-primary k-right-handle k-pos-right" (onclick)="onClick()">Sign In</button>
+                          </form>
+                      </div>
+
+
+                  </ng-template>
+              </kendo-tabstrip-tab>
+
+              <kendo-tabstrip-tab [title]="'Sign Up'">
+                  <ng-template kendoTabContent>
+
+                      <div class="card-block">
+                          <form [formGroup]="signUpForm" (ngSubmit)="onSignUp()" class="k-form">
+                              <label class="k-form-field">
+                                  <span>Username</span>
+                                  <input formControlName="username" type="text" class="k-textbox" placeholder="Username" />
+                              </label>
+                              <label class="k-form-field">
+                                  <span>Email</span>
+                                  <input formControlName="email" type="text" class="k-textbox" placeholder="Email" />
+                              </label>
+                              <label class="k-form-field">
+                                  <span>Password</span>
+                                  <input formControlName="password" type="password" class="k-textbox" placeholder="Password" />
+                              </label>
+                              <button class="k-button k-primary k-right-handle k-pos-right" (onclick)="onClick()">Sign Up</button>
+                          </form>
+                      </div>
+
+                  </ng-template>
+              </kendo-tabstrip-tab>
+          </kendo-tabstrip>
+      </div>
+  </div>
+</div>
