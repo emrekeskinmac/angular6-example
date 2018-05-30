@@ -7,8 +7,25 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="//netdna.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    .loading{
+      padding:  20px;
+      text-align: center;
+      margin: 0 auto;
+      background: #E74C3C;
+      height: 100vh;
+    }
+    .loading img{
+      transform: translateY(40vh);
+    }
+  </style>
 </head>
 <body>
-  <app-root></app-root>
+    <app>  
+      <div class="loading">
+          <img src="https://samherbert.net/svg-loaders/svg-loaders/ball-triangle.svg" alt="">
+      </div>
+    </app>
 </body>
 </html>
