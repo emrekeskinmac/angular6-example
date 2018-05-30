@@ -23,11 +23,12 @@
     "@progress/kendo-angular-buttons": "^4.1.1",
     "@progress/kendo-angular-inputs": "^3.1.2",
     "@progress/kendo-angular-intl": "^1.4.1",
-    "@progress/kendo-angular-l10n": "^1.2.0",
-    "@progress/kendo-theme-default": "^2.53.2",
+    "@progress/kendo-angular-l10n": "^1.1.0",
+    "@progress/kendo-angular-layout": "^3.1.0",
+    "@progress/kendo-theme-default": "latest",
     "core-js": "^2.5.4",
     "rxjs": "^6.0.0",
-    "rxjs-compat": "^6.2.0",
+    "rxjs-compat": "^6.0.0",
     "zone.js": "^0.8.26"
   },
   "devDependencies": {
