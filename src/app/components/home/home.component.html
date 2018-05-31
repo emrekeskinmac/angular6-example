@@ -1,0 +1,19 @@
+
+
+<div class="container">
+  <div class="row justify-content-center">
+      <div class="col-12">
+          <p>Panel</p>
+          <kendo-menu [items]="menuItems">
+          </kendo-menu>
+      </div>
+      <div class="col-12">
+        <kendo-grid [data]="gridData" (select)="onSelect($event)" [height]="410">
+            <kendo-grid-column field="username" title="Kullanıcı Adı" width="250">
+            </kendo-grid-column>
+            <kendo-grid-column field="email" title="Email" width="250">
+            </kendo-grid-column>
+        </kendo-grid>
+      </div>
+  </div>
+</div>
