@@ -1,9 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Observable } from 'rxjs/Rx';
 import { first } from 'rxjs/operators';
 
 import { UserService, AuthenticationService  } from '../../services';
+
+import { TabStripComponent } from '@progress/kendo-angular-layout';
 
 @Component({
   selector: 'app-auth',
@@ -11,8 +14,13 @@ import { UserService, AuthenticationService  } from '../../services';
   styleUrls: ['./auth.component.scss']
 })
 export class AuthComponent implements OnInit {
+  @ViewChild('tabstrip')
+  public tabstrip: TabStripComponent
+
   signInForm: FormGroup;
   signUpForm: FormGroup;
+  signInSelected: boolean = true;
+  signUpSelected: boolean = false;
   returnUrl: string;
 
   constructor(
@@ -20,7 +28,7 @@ export class AuthComponent implements OnInit {
     private userService: UserService,
     private route: ActivatedRoute,
     private authenticationService: AuthenticationService,
-    private router: Router
+    private router: Router,
   ) {}
 
   ngOnInit() {
@@ -56,9 +64,10 @@ export class AuthComponent implements OnInit {
             this.router.navigate([this.returnUrl]);
         },
         error => {
+          this.tabstrip.selectTab(1)
           alert(error);
         });
-  }
+    }
 
 
   onSignUp() {
@@ -72,13 +81,12 @@ export class AuthComponent implements OnInit {
       .pipe(first())
       .subscribe(
           (data: any) => {
-            let element: HTMLElement = document.querySelectorAll('#k-tabstrip-tab-0')[0] as HTMLElement;
-            element.click();
           },
           (error: any) => {
             alert(error);
           });
-
   }
+
+  
 
 }

@@ -2,8 +2,8 @@
   <div class="row justify-content-center">
       <div class="col-6">
           <p>Panel</p>
-          <kendo-tabstrip>
-              <kendo-tabstrip-tab [title]="'Sign In'" [selected]="true">
+          <kendo-tabstrip #tabstrip>
+              <kendo-tabstrip-tab [title]="'Sign In'" [selected]="signInSelected">
                   <ng-template kendoTabContent>
 
                       <div class="card-block">
@@ -24,7 +24,7 @@
                   </ng-template>
               </kendo-tabstrip-tab>
 
-              <kendo-tabstrip-tab [title]="'Sign Up'">
+              <kendo-tabstrip-tab [title]="'Sign Up'" [selected]="signUpSelected">
                   <ng-template kendoTabContent>
 
                       <div class="card-block">

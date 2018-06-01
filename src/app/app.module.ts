@@ -12,16 +12,22 @@ import { GridModule } from '@progress/kendo-angular-grid';
 
 // Util
 import { AppComponent }  from './app.component';
-import { Routing }        from './app.routing';
-
-// Component
-import { AuthComponent } from './components/auth/auth.component';
-import { HomeComponent } from './components/home/home.component';
+import { AppRoutingModule } from './app.routing.module';
 
 // Provider
 import { AuthGuard } from "./guards/auth.guard";
 import { AuthenticationService, UserService  } from "./services";
 import { JwtInterceptor, fakeBackendProvider } from "./helpers";
+
+// Layout
+import { HomeLayoutComponent } from './layout/home-layout.component';
+import { LoginLayoutComponent } from './layout/login-layout.component';
+
+// Component
+import { AuthComponent } from './components/auth/auth.component';
+import { HomeComponent } from './components/home/home.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
     bootstrap: [AppComponent],
@@ -29,7 +35,7 @@ import { JwtInterceptor, fakeBackendProvider } from "./helpers";
         BrowserModule,
         ReactiveFormsModule,
         HttpClientModule,
-        Routing,
+        AppRoutingModule,
         BrowserAnimationsModule,
         ButtonsModule,
         LayoutModule,
@@ -39,7 +45,11 @@ import { JwtInterceptor, fakeBackendProvider } from "./helpers";
     declarations: [
         AppComponent,
         AuthComponent,
-        HomeComponent
+        HomeComponent,
+        SidebarComponent,
+        HeaderComponent,
+        HomeLayoutComponent,
+        LoginLayoutComponent
     ],
     providers: [
         AuthGuard,
