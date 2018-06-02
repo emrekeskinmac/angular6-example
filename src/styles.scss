@@ -1,155 +1,111 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@progress/kendo-theme-default/scss/all";
 
+body {
+  font-size: .875rem;
+}
 
-// Spacing Variables
 
-$navbar-base-height: 56px;
-$sidenav-base-width: 250px;
-$sidenav-collapsed-width: 55px;
-$sticky-footer-height: 56px;
+.mt-20{
+  margin-top: 20px;
+}
 
-#mainNav {
-    .navbar-collapse {
-      overflow: auto;
-  
-      max-height: 75vh;
-      .navbar-nav {
-        .nav-item {
-          .nav-link {
-            cursor: pointer;
-          }
-        }
-      }
-      .navbar-sidenav {
-        .nav-link-collapse:after {
-          float: right;
-  
-          content: '\f107';
-  
-          font-family: 'FontAwesome';
-        }
-        .nav-link-collapse.collapsed:after {
-          content: '\f105';
-        }
-        .sidenav-second-level,
-        .sidenav-third-level {
-          padding-left: 0;
-          > li > a {
-            display: block;
-  
-            padding: 0.5em 0;
-            &:focus,
-            &:hover {
-              text-decoration: none;
-            }
-          }
-        }
-        .sidenav-second-level > li > a {
-          padding-left: 1em;
-        }
-        .sidenav-third-level > li > a {
-          padding-left: 2em;
-        }
-      }
-      .sidenav-toggler {
-        display: none;
-      }
-      .navbar-nav > .nav-item.dropdown {
-        > .nav-link {
-          position: relative;
-  
-          min-width: 45px;
-          &:after {
-            float: right;
-  
-            width: auto;
-  
-            content: '\f105';
-  
-            border: none;
-  
-            font-family: 'FontAwesome';
-          }
-          .indicator {
-            position: absolute;
-            top: 5px;
-            left: 21px;
-            font-size: 10px;
-          }
-        }
-        &.show > .nav-link:after {
-          content: '\f107';
-        }
-        .dropdown-menu > .dropdown-item > .dropdown-message {
-          overflow: hidden;
-  
-          max-width: none;
-  
-          text-overflow: ellipsis;
-        }
-      }
-    }
-    @media (min-width: 992px) {
-      .navbar-brand {
-        width: $sidenav-base-width;
-      }
-      .navbar-collapse {
-        overflow: visible;
-  
-        max-height: none;
-        .navbar-sidenav {
-          position: absolute;
-          top: 0;
-          left: 0;
-  
-          -webkit-flex-direction: column;
-          -ms-flex-direction: column;
-          flex-direction: column;
-  
-          margin-top: $navbar-base-height;
-  
-          > .nav-item {
-            width: $sidenav-base-width;
-            padding: 0;
-            > .nav-link {
-              padding: 1em;
-            }
-            .sidenav-second-level,
-            .sidenav-third-level {
-              padding-left: 0;
-  
-              list-style: none;
-  
-              > li {
-                width: $sidenav-base-width;
-                > a {
-                  padding: 1em;
-                }
-              }
-            }
-            .sidenav-second-level > li > a {
-              padding-left: 2.75em;
-            }
-            .sidenav-third-level > li > a {
-              padding-left: 3.75em;
-            }
-          }
-        }
-        .navbar-nav > .nav-item.dropdown {
-          > .nav-link {
-            min-width: 0;
-            &:after {
-              width: 24px;
-  
-              text-align: center;
-            }
-          }
-          .dropdown-menu > .dropdown-item > .dropdown-message {
-            max-width: 300px;
-          }
-        }
-      }
-    }
+.p-20{
+  padding: 20px;
+}
+
+.no-padding{
+  padding: 0;
+}
+
+
+
+/*
+ * Sidebar
+ */
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100; /* Behind the navbar */
+  padding: 48px 0 0; /* Height of navbar */
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);w
+}
+
+.sidebar-sticky {
+  position: relative;
+  top: 0;
+  height: calc(100vh - 48px);
+  padding-top: .5rem;
+  overflow-x: hidden;
+  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+}
+
+@supports ((position: -webkit-sticky) or (position: sticky)) {
+  .sidebar-sticky {
+    position: -webkit-sticky;
+    position: sticky;
   }
-  
+}
+
+.sidebar .nav-link {
+  font-weight: 500;
+  color: #333;
+}
+
+.sidebar .nav-link .feather {
+  margin-right: 4px;
+  color: #999;
+}
+
+.sidebar .nav-link.active {
+  color: #E74C3C;
+}
+
+.sidebar .nav-link:hover .feather,
+.sidebar .nav-link.active .feather {
+  color: inherit;
+}
+
+.sidebar-heading {
+  font-size: .75rem;
+  text-transform: uppercase;
+}
+
+/*
+ * Navbar
+ */
+
+.navbar-brand {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  font-size: 1rem;
+  background-color: rgba(0, 0, 0, .25);
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, .25);
+}
+
+.navbar .form-control {
+  padding: .75rem 1rem;
+  border-width: 0;
+  border-radius: 0;
+}
+
+.form-control-dark {
+  color: #fff;
+  background-color: rgba(255, 255, 255, .1);
+  border-color: rgba(255, 255, 255, .1);
+}
+
+.form-control-dark:focus {
+  border-color: transparent;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
+}
+
+/*
+ * Utilities
+ */
+
+.border-top { border-top: 1px solid #e5e5e5; }
+.border-bottom { border-bottom: 1px solid #e5e5e5; }

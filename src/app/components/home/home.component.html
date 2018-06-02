@@ -1,19 +1,108 @@
-<!-- 
+  <div class="row z-portlet mt-20">
+    <div class="col-md-12 col-lg-6 col-xl-3 no-padding">
+      <div class="z-widget">
+        <div class="z-widget_title">
+          Müşteriler
+        </div>
+        <div class="z-widget_desc">
+          Müşteri Toplamı
+        </div>
+        <div class="z-widget_stat">
+          250
+        </div>
+        <div class="z-widget_progress" style="width: 20%;">
 
-<div class="container">
-  <div class="row justify-content-center">
-      <div class="col-12">
-          <p class="">Panel</p>
-          <kendo-menu [items]="menuItems">
-          </kendo-menu>
+        </div>
+        <div class="z-widget_percent">
+          20%
+        </div>
       </div>
-      <div class="col-12 mt-20">
-        <kendo-grid [data]="users" (select)="onSelect($event)" [height]="410">
+    </div>
+    <div class="col-md-12 col-lg-6 col-xl-3  no-padding">
+      <div class="z-widget">
+        <div class="z-widget_title">
+          Müşteriler
+        </div>
+        <div class="z-widget_desc">
+          Müşteri Toplamı
+        </div>
+        <div class="z-widget_stat">
+          30
+        </div>
+        <div class="z-widget_progress" style="width: 50%;">
+        </div>
+        <div class="z-widget_percent">
+          50%
+        </div>
+      </div>
+    </div>
+    <div class="col-md-12 col-lg-6 col-xl-3  no-padding">
+      <div class="z-widget">
+        <div class="z-widget_title">
+          Müşteriler
+        </div>
+        <div class="z-widget_desc">
+          Müşteri Toplamı
+        </div>
+        <div class="z-widget_stat">
+          150
+        </div>
+        <div class="z-widget_progress" style="width: 30%;">
+        </div>
+        <div class="z-widget_percent">
+          30%
+        </div>
+      </div>
+    </div>
+    <div class="col-md-12 col-lg-6 col-xl-3  no-padding">
+      <div class="z-widget">
+        <div class="z-widget_title">
+          Müşteriler
+        </div>
+        <div class="z-widget_desc">
+          Müşteri Toplamı
+        </div>
+        <div class="z-widget_stat">
+          44
+        </div>
+        <div class="z-widget_progress" style="width: 60%;">
+        </div>
+        <div class="z-widget_percent">
+          60%
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12 no-padding mt-20">
+      <div class="card">
+        <div class="card-block">
+          <kendo-chart [categoryAxis]="{ categories: categories }">
+            <kendo-chart-title text="Gross domestic product growth /GDP annual %/"></kendo-chart-title>
+            <kendo-chart-legend position="bottom" orientation="horizontal"></kendo-chart-legend>
+            <kendo-chart-tooltip format="{0}%"></kendo-chart-tooltip>
+            <kendo-chart-series>
+              <kendo-chart-series-item *ngFor="let item of series" type="line" [data]="item.data" [name]="item.name">
+              </kendo-chart-series-item>
+            </kendo-chart-series>
+          </kendo-chart>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12 no-padding mt-20">
+      <div class="card">
+        <div class="card-block">
+          <kendo-grid [data]="users" [height]="410">
             <kendo-grid-column field="username" title="Kullanıcı Adı" width="250">
             </kendo-grid-column>
-            <kendo-grid-column field="email" title="Email" width="250">
+            <kendo-grid-column field="email" title="Email Adresi" width="250">
             </kendo-grid-column>
-        </kendo-grid>
+          </kendo-grid>
+        </div>
       </div>
+    </div>
   </div>
-</div> -->

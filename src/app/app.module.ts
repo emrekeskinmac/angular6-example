@@ -1,23 +1,28 @@
-import { NgModule }      from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { ReactiveFormsModule }    from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { CommonModule } from '@angular/common';
 
 // Kendo UI
 import { ButtonsModule } from '@progress/kendo-angular-buttons';
 import { LayoutModule } from '@progress/kendo-angular-layout';
 import { MenuModule } from '@progress/kendo-angular-menu';
 import { GridModule } from '@progress/kendo-angular-grid';
+import { ChartsModule } from '@progress/kendo-angular-charts';
+import 'hammerjs'; // Kendo UI Chart kütüphanesi için yüklediği modül
 
-// Util
-import { AppComponent }  from './app.component';
+// App Component ve Routing
+import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app.routing.module';
 
-// Provider
-import { AuthGuard } from "./guards/auth.guard";
-import { AuthenticationService, UserService  } from "./services";
-import { JwtInterceptor, fakeBackendProvider } from "./helpers";
+// Provider ve Auth Modülleri
+import { AuthGuard } from './guards/auth.guard';
+import { AuthenticationService, UserService  } from './services';
+import { JwtInterceptor, fakeBackendProvider } from './helpers';
+import { RouterModule } from '@angular/router';
 
 // Layout
 import { HomeLayoutComponent } from './layout/home-layout.component';
@@ -28,9 +33,12 @@ import { AuthComponent } from './components/auth/auth.component';
 import { HomeComponent } from './components/home/home.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { HeaderComponent } from './components/header/header.component';
+import { DocsComponent } from './components/docs/docs.component';
+
 
 @NgModule({
     bootstrap: [AppComponent],
+    schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
     imports: [
         BrowserModule,
         ReactiveFormsModule,
@@ -40,7 +48,11 @@ import { HeaderComponent } from './components/header/header.component';
         ButtonsModule,
         LayoutModule,
         MenuModule,
-        GridModule
+        GridModule,
+        ChartsModule,
+        AngularFontAwesomeModule,
+        RouterModule,
+        CommonModule
     ],
     declarations: [
         AppComponent,
@@ -49,7 +61,8 @@ import { HeaderComponent } from './components/header/header.component';
         SidebarComponent,
         HeaderComponent,
         HomeLayoutComponent,
-        LoginLayoutComponent
+        LoginLayoutComponent,
+        DocsComponent
     ],
     providers: [
         AuthGuard,
@@ -62,7 +75,7 @@ import { HeaderComponent } from './components/header/header.component';
         },
 
         fakeBackendProvider
-    ],
+    ]
 })
 
 export class AppModule { }

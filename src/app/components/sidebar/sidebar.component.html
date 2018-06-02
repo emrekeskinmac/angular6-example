@@ -1,188 +1,74 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-  <a class="navbar-brand" href="index.html">Start Bootstrap</a>
-  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarResponsive">
-    <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
-      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
-        <a class="nav-link" href="index.html">
-          <i class="fa fa-fw fa-dashboard"></i>
-          <span class="nav-link-text">Dashboard</span>
+<nav class="col-md-2 d-none d-md-block bg-light sidebar">
+  <div class="sidebar-sticky">
+    <ul class="nav flex-column">
+      <li class="nav-item">
+        <a class="nav-link active" href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+          Dashboard <span class="sr-only">(current)</span>
         </a>
       </li>
-      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
-        <a class="nav-link" href="charts.html">
-          <i class="fa fa-fw fa-area-chart"></i>
-          <span class="nav-link-text">Charts</span>
-        </a>
-      </li>
-      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
-        <a class="nav-link" href="tables.html">
-          <i class="fa fa-fw fa-table"></i>
-          <span class="nav-link-text">Tables</span>
-        </a>
-      </li>
-      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
-        <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
-          <i class="fa fa-fw fa-wrench"></i>
-          <span class="nav-link-text">Components</span>
-        </a>
-        <ul class="sidenav-second-level collapse" id="collapseComponents">
-          <li>
-            <a href="navbar.html">Navbar</a>
-          </li>
-          <li>
-            <a href="cards.html">Cards</a>
-          </li>
-        </ul>
-      </li>
-      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
-        <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseExamplePages" data-parent="#exampleAccordion">
-          <i class="fa fa-fw fa-file"></i>
-          <span class="nav-link-text">Example Pages</span>
-        </a>
-        <ul class="sidenav-second-level collapse" id="collapseExamplePages">
-          <li>
-            <a href="login.html">Login Page</a>
-          </li>
-          <li>
-            <a href="register.html">Registration Page</a>
-          </li>
-          <li>
-            <a href="forgot-password.html">Forgot Password Page</a>
-          </li>
-          <li>
-            <a href="blank.html">Blank Page</a>
-          </li>
-        </ul>
-      </li>
-      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
-        <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti" data-parent="#exampleAccordion">
-          <i class="fa fa-fw fa-sitemap"></i>
-          <span class="nav-link-text">Menu Levels</span>
-        </a>
-        <ul class="sidenav-second-level collapse" id="collapseMulti">
-          <li>
-            <a href="#">Second Level Item</a>
-          </li>
-          <li>
-            <a href="#">Second Level Item</a>
-          </li>
-          <li>
-            <a href="#">Second Level Item</a>
-          </li>
-          <li>
-            <a class="nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti2">Third Level</a>
-            <ul class="sidenav-third-level collapse" id="collapseMulti2">
-              <li>
-                <a href="#">Third Level Item</a>
-              </li>
-              <li>
-                <a href="#">Third Level Item</a>
-              </li>
-              <li>
-                <a href="#">Third Level Item</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
+      <li class="nav-item">
         <a class="nav-link" href="#">
-          <i class="fa fa-fw fa-link"></i>
-          <span class="nav-link-text">Link</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg>
+          Orders
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+          Products
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          Customers
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bar-chart-2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+          Reports
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-layers"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+          Integrations
         </a>
       </li>
     </ul>
-    <ul class="navbar-nav sidenav-toggler">
+
+    <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+      <span>Saved reports</span>
+      <a class="d-flex align-items-center text-muted" href="#">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus-circle"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>
+      </a>
+    </h6>
+    <ul class="nav flex-column mb-2">
       <li class="nav-item">
-        <a class="nav-link text-center" id="sidenavToggler">
-          <i class="fa fa-fw fa-angle-left"></i>
+        <a class="nav-link" href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          Current month
         </a>
-      </li>
-    </ul>
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle mr-lg-2" id="messagesDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fa fa-fw fa-envelope"></i>
-          <span class="d-lg-none">Messages
-            <span class="badge badge-pill badge-primary">12 New</span>
-          </span>
-          <span class="indicator text-primary d-none d-lg-block">
-            <i class="fa fa-fw fa-circle"></i>
-          </span>
-        </a>
-        <div class="dropdown-menu" aria-labelledby="messagesDropdown">
-          <h6 class="dropdown-header">New Messages:</h6>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">
-            <strong>David Miller</strong>
-            <span class="small float-right text-muted">11:21 AM</span>
-            <div class="dropdown-message small">Hey there! This new version of SB Admin is pretty awesome! These messages clip off when they reach the end of the box so they don't overflow over to the sides!</div>
-          </a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">
-            <strong>Jane Smith</strong>
-            <span class="small float-right text-muted">11:21 AM</span>
-            <div class="dropdown-message small">I was wondering if you could meet for an appointment at 3:00 instead of 4:00. Thanks!</div>
-          </a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">
-            <strong>John Doe</strong>
-            <span class="small float-right text-muted">11:21 AM</span>
-            <div class="dropdown-message small">I've sent the final files over to you for review. When you're able to sign off of them let me know and we can discuss distribution.</div>
-          </a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item small" href="#">View all messages</a>
-        </div>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle mr-lg-2" id="alertsDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fa fa-fw fa-bell"></i>
-          <span class="d-lg-none">Alerts
-            <span class="badge badge-pill badge-warning">6 New</span>
-          </span>
-          <span class="indicator text-warning d-none d-lg-block">
-            <i class="fa fa-fw fa-circle"></i>
-          </span>
-        </a>
-        <div class="dropdown-menu" aria-labelledby="alertsDropdown">
-          <h6 class="dropdown-header">New Alerts:</h6>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">
-            <span class="text-success">
-              <strong>
-                <i class="fa fa-long-arrow-up fa-fw"></i>Status Update</strong>
-            </span>
-            <span class="small float-right text-muted">11:21 AM</span>
-            <div class="dropdown-message small">This is an automated server response message. All systems are online.</div>
-          </a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">
-            <span class="text-danger">
-              <strong>
-                <i class="fa fa-long-arrow-down fa-fw"></i>Status Update</strong>
-            </span>
-            <span class="small float-right text-muted">11:21 AM</span>
-            <div class="dropdown-message small">This is an automated server response message. All systems are online.</div>
-          </a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">
-            <span class="text-success">
-              <strong>
-                <i class="fa fa-long-arrow-up fa-fw"></i>Status Update</strong>
-            </span>
-            <span class="small float-right text-muted">11:21 AM</span>
-            <div class="dropdown-message small">This is an automated server response message. All systems are online.</div>
-          </a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item small" href="#">View all alerts</a>
-        </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
-          <i class="fa fa-fw fa-sign-out"></i>Logout</a>
+        <a class="nav-link" href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          Last quarter
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          Social engagement
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          Year-end sale
+        </a>
       </li>
     </ul>
   </div>

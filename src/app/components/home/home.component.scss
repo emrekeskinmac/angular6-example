@@ -1,8 +1,45 @@
 
-.mt-20{
-    margin-top: 20px;
+.z-portlet{
+  background-color: #fff;
+  box-shadow: 0 1px 15px 1px rgba(81, 77, 92, 0.08);
 }
 
-.p-20{
-    padding: 20px;
+.z-widget{
+  border-right: 1px solid #ececec;
+  height: 100%;
+  &:nth-last-child(1) {
+    border: 0;
+  }
+  &_title{
+    color: #444;
+    margin-left: 1rem;
+    margin-top: 2rem;
+    display: inline-block;
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+  &_desc{
+    margin-left: 1rem;
+    font-size: 0.7rem;
+  }
+  &_stat{
+    float: right;
+    margin-right: 1rem;
+    margin-top: -3rem;
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #E74C3C;
+  }
+  &_progress{
+    background: #E74C3C;
+    height: 10px;
+    border-radius: 5px;
+    margin: 0.5rem 1rem;
+  }
+  &_percent{
+    text-align: right;
+    margin-right: 1rem;
+    color: #999;
+    margin-bottom: 10px;
+  }
 }

@@ -30,6 +30,7 @@
               {
                 "input": "node_modules/@progress/kendo-theme-default/scss/all.scss"
               },
+              "node_modules/font-awesome/css/font-awesome.css",
               "src/styles.scss"
             ],
             "scripts": []

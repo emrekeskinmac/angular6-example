@@ -1,0 +1,7 @@
+organization=emrekeskinmac-github
+projectKey=29c8440db6c0d7e5d61e2122e22eecd25f6412c9
+serverUrl=https://sonarcloud.io
+serverVersion=7.2.0.12516
+dashboardUrl=https://sonarcloud.io/dashboard/index/29c8440db6c0d7e5d61e2122e22eecd25f6412c9
+ceTaskId=AWPBw6bACPImwYt77FpL
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AWPBw6bACPImwYt77FpL
